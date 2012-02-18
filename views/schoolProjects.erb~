@@ -1,0 +1,13 @@
+<h1>Mateoritos <span style="font-size: 22px">Fall 2009</span></h1>
+<h2>Problem Solving with Programming Project</h2>
+<p>
+Developed a Game focusing on Mathematics by a team of 4.<br />
+Responsabilities: Project Leader, responsible for assigning tasks and review the others work. Also in  charge of designing and implementing in Java some of the functionalities of the game
+</p>
+<hr />
+<h1>VARCH Sistema de Validación de Archivos (System for validating files) <span style="font-size: 22px">Fall 2011</span></h1>
+<h2>Software Development Project</h2>
+<p>
+Developed a system which receives a zip files with source code from an exercise made on a certain programming class, and the system compared it all vs all to find how similar are the codes among each other, so you can identify how similar the students think or maybe if they cheated.<br />
+Developed by a team of 5. My responsibility was to code the front-end using the Ruby on Rails Framework.
+</p>

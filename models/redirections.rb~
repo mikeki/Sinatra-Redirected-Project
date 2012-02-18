@@ -1,0 +1,2 @@
+class Redirects < ActiveRecord::Base
+end

@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title><%= title("Editando")%></title>
+  <meta name="description" content="Administration of subdomains">
+  <meta name="author" content="Miguel Cervera">
+  <style type="text/css">
+    table{
+      width:500px;
+    }
+    
+    table th, table td{
+      border:1px solid #000;
+    }
+  </style>
+  </head>
+  <body>
+    <div>
+      <h1>Redirects</h1>
+      <% if @message%>
+        <span><%= @message%></span>
+      <%end%>
+      <h3>Editing Redirect <%= @redirect.name%></h3>
+      <form method="POST" action="/admin/<%=@redirect.id%>/update">
+        <label for="name">Name:</label>
+        <input type="text" name="name" size="15" value="<%=@reditect.name%>" />
+        <br />
+        <label for="subdomain">Subdomain:</label>
+        <input type="text" name="subdomain" size="15" value="<%=@reditect.subdomain%>" />
+        <br />
+        <label for="url">URL:</label>
+        <input type="text" name="url" size="50" value="<%=@reditect.url%>" />
+        <br />
+        <p><input type="submit" value="Update" /></p>
+      </form>
+    </div>
+  </body>
+</html>

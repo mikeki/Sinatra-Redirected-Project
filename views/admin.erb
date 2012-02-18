@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title><%= title("Administration")%></title>
+  <meta name="description" content="Administration of subdomains">
+  <meta name="author" content="Miguel Cervera">
+  <style type="text/css">
+    table{
+      width:500px;
+    }
+    
+    table th, table td{
+      border:1px solid #000;
+    }
+  </style>
+  </head>
+  <body>
+    <div>
+      <h1>Redirects</h1>
+      <% if @message%>
+        <span><%= @message%></span>
+      <%end%>
+      <% if @redirects != []%>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Subdomain</th>
+          <th>URL</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <%@redirects.each do |redirect|%>
+          <tr>
+            <td><%= redirect.name %></td>
+            <td><%= redirect.subdomain %></td>
+            <td><%= redirect.url %></td>
+            <td><%= link_to 'Edit', "/admin/#{redirect.id}/edit"%></td>
+            <td><%= link_to 'Destroy', "/admin/#{redirect.id}/destroy"%></td>
+          </tr>
+        <%end%>
+      </table>
+      <%end%>
+      <h3>New Redirect</h3>
+      <form method="POST" action="/admin/create_redirect">
+        <label for="name">Name:</label>
+        <input type="text" name="name" size="15" />
+        <br />
+        <label for="subdomain">Subdomain:</label>
+        <input type="text" name="subdomain" size="15" />
+        <br />
+        <label for="url">URL:</label>
+        <input type="text" name="url" size="50"/>
+        <br />
+        <p><input type="submit" value="Create" /></p>
+      </form>
+    </div>
+  </body>
+</html>

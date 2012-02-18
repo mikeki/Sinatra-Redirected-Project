@@ -1,0 +1,9 @@
+<div id="cervera-ajax">
+  <div style="width:840px;">
+    <%= yield%>
+  </div>
+</div>
+<script type="text/javascript">
+		Cufon.replace('#cervera-ajax h1').now();
+		Cufon.replace('#cervera-ajax p').now();
+</script> 
